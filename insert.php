@@ -1,5 +1,5 @@
 <?php
-$servername = "localhost:3306";
+$servername = "localhost";
 $username = "emma";
 $password = "Silverlight.1";
 $dbname = "smarteralert";
