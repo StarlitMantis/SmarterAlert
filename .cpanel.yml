@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/n4197iakcyub/public_html
+    - export DEPLOYPATH=/home/n4197iakcyub/public_html/smarteralert.starlitmantis.com/
     - /bin/cp -r * $DEPLOYPATH
