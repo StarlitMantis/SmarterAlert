@@ -1,6 +1,6 @@
 <?php
 $servername = "localhost";
-$username = "root";
+$username = "emma";
 $password = "Silverlight.1";
 $dbname = "smarteralert";
 
