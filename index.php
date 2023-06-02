@@ -9,17 +9,25 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
         <title></title>
     </head>
     <body>
+        
+        <form action="login.php" method="post">
+            
         <h3>User Name:</h3>
-<input type="text" name="user_name">
+<input type="text" name="endusername" id="endusername">
 <h3>Password:</h3>
-<input type="password" name="password">
-	<input type="hidden" name="action" value="login">
-	<?php
-	$user_name = filter_input(INPUT_POST,'user_name');
-	$password = filter_input(INPUT_POST,'password');
-	$action = filter_input(INPUT_POST,'action');
-?>
-        <p><a href="Package Entry.php">Click Me</a></p>
+<input type="password" name="enduserpassword" id="enduserpassword">
+	
+	
+        <p><input type="submit" value="Submit"></p>
+        <p>Send a mail to <a href="mailto:emma@starlitmantis.com">emma@starlitmantis.com</a> for login support.</p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <p>Dev Testing:</p>
+        <p><a href="Package Entry.php">Package Entry</a></p>
         <p><a href="databaseconnect.php">database</a></p>
+        <p><a href="settings.php">Settings</a></p>
+        </form>
     </body>
 </html>

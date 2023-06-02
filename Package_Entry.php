@@ -1,16 +1,33 @@
+<?php
+        session_start();
+        include "dbconn.php";
+        
+        $sql = ("SELECT numentries FROM settings WHERE id=?");
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("s",$_SESSION['id']);
+        $stmt->execute();
+        $result=$stmt->get_result();
+        $row = $result->fetch_row();
+        echo $_SESSION['id'];
+        
+        echo $row[0];
+        ?>
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edit this template
--->
 <html>
     <head>
         <meta charset="UTF-8">
         <title>Package Entry</title>
     </head>
     <body>
+        
         <form action="insert.php" method="post">
         <h3>Package Entry</h3>
+        <p>Select number of packages <select name="numofpackages" id="numofpackages">
+            <option selected disabled hidden><?php echo $row[0];?></option>
+            <option value="10">10</option>
+            <option value="25">25</option>
+            <option value="50">50</option>
+        </select></p>
         
         <hr>
         <p>01.
@@ -29,6 +46,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
 </p>
 
 <input type="submit" value="Submit">
+<p><a href="settings.php">Settings</a></p>
 <?php
 // the message
 $msg = "First line of text\nSecond line of text";
