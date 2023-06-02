@@ -1,8 +1,13 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edit this template
--->
+<?php
+
+/*
+ * Hello and welcome to my webpage. I have labled various elements that are
+ * temporary and left some notes to help ya some notes to help ya understand
+ * how things will look like when they are done.
+ */
+
+?>
 <html>
     <head>
         <meta charset="UTF-8">

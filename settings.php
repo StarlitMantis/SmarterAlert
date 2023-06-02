@@ -8,10 +8,11 @@ session_start();
         $stmt->bind_param("s",$_SESSION['id']);
         $stmt->execute();
         $result=$stmt->get_result();
-        $_SESSION['numentries'] = $result->fetch_row();
+        $row= $result->fetch_row();
         echo $_SESSION['id'];
-        
+        $_SESSION['numentries']=$row;
         echo $row[0];
+        
         ?>
 
 
@@ -25,7 +26,7 @@ session_start();
         <form id="form1" action="upload.php" method="post">
         <h3>Settings</h3>
         <p>Select number of packages <select name="numofpackages" id="numofpackages">
-            <option selected disabled hidden><?php echo $_SESSION['numentries'];?></option>
+            <option selected disabled hidden><?php echo $row[0];?></option>
             <option value="10">10</option>
             <option value="25">25</option>
             <option value="50">50</option>

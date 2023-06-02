@@ -11,6 +11,8 @@
         echo $_SESSION['id'];
         
         echo $row[0];
+        
+        //Yo, just a heads up those numbers at the top are session information and will not be present in the final build. They appear in a few different pages btw
         ?>
 <!DOCTYPE html>
 <html>
@@ -47,7 +49,9 @@
 
 <input type="submit" value="Submit">
 <p><a href="settings.php">Settings</a></p>
+
 <?php
+/*
 // the message
 $msg = "First line of text\nSecond line of text";
 
@@ -56,7 +60,9 @@ $msg = wordwrap($msg,70);
 
 // send email
 mail("emma@starlitmantis.com","My subject",$msg);
+*/
 ?>
+
         </form>    
 </body>
 </html>

@@ -1,4 +1,9 @@
 <?php
+
+/*
+ * This is a serverside page that doesnt need any styles
+ */
+
 session_start();
 include "dbconn.php";
 $_LocalKey = $_SESSION['id'];

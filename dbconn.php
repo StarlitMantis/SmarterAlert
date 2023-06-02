@@ -1,4 +1,9 @@
 <?php
+
+/*
+ * This is a serverside page that doesnt need any styles
+ */
+
 $servername = "localhost";
 $username = "emma";
 $password = "Silverlight.1";
